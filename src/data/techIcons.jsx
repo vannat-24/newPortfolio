@@ -48,6 +48,30 @@ export const getTechIcon = (name) => {
     )
   }
 
+  if (normalized.includes('bootstrap')) {
+    return (
+      <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none">
+        <rect width="24" height="24" rx="5" fill="#7952B3" />
+        <path
+          d="M7 6h5.8c1.8 0 3 .9 3 2.3 0 1.1-.7 1.9-1.7 2.2 1.3.3 2.1 1.2 2.1 2.5 0 1.6-1.3 2.6-3.3 2.6H7V6zm2.4 3.7h3.1c.7 0 1.2-.4 1.2-1 0-.6-.5-1-1.2-1H9.4v2zm0 4.1h3.4c.8 0 1.4-.4 1.4-1.1 0-.7-.6-1.1-1.4-1.1H9.4v2.2z"
+          fill="#FFFFFF"
+        />
+      </svg>
+    )
+  }
+
+  if (normalized.includes('network') || normalized.includes('hardware')) {
+    return (
+      <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="#0284C7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="3" width="20" height="7" rx="2" />
+        <path d="M6 6.5h.01M10 6.5h.01M14 6.5h.01M18 6.5h.01" />
+        <rect x="3" y="15" width="7" height="6" rx="1.5" />
+        <rect x="14" y="15" width="7" height="6" rx="1.5" />
+        <path d="M6.5 10v5M17.5 10v5" />
+      </svg>
+    )
+  }
+
   if (normalized.includes('nuxt')) {
     return (
       <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none">
@@ -154,6 +178,26 @@ export const getTechIcon = (name) => {
       <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none">
         <path d="M18.5 2.1l-8 7.3L5.4 5.2 2 7.1l5.4 4.9L2 16.9l3.4 1.9 5.1-4.2 8 7.3c.7.6 1.8.1 1.8-.8V2.9c0-.9-1.1-1.4-1.8-.8z" fill="#007ACC" />
         <path d="M18.5 2.1c.3-.3.8-.3 1.1 0 .3.3.4.7.4 1.1v17.6c0 .4-.1.8-.4 1.1-.3.3-.8.3-1.1 0l-8-7.3 8-12.5z" fill="#1F9CF0" />
+      </svg>
+    )
+  }
+
+  if (normalized === 'c') {
+    return (
+      <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none">
+        <rect width="24" height="24" rx="4" fill="#A8B9CC" />
+        <path d="M15.5 8.5a4.5 4.5 0 00-7 3.5 4.5 4.5 0 007 3.5" stroke="#1E293B" strokeWidth="2.2" strokeLinecap="round" />
+      </svg>
+    )
+  }
+
+  if (normalized.includes('algorithm') || normalized.includes('oop') || normalized.includes('logic')) {
+    return (
+      <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="#6366F1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="18" cy="6" r="3" />
+        <circle cx="6" cy="12" r="3" />
+        <circle cx="18" cy="18" r="3" />
+        <path d="M8.7 10.7l6.6-3.4M8.7 13.3l6.6 3.4" />
       </svg>
     )
   }

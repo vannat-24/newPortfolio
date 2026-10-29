@@ -65,14 +65,18 @@ export const Header = () => {
             <a
               href="#"
               className="flex items-center group cursor-pointer select-none transition-transform duration-200 active:scale-95"
-              aria-label="Morfolio Home"
+              aria-label="sivvannat home"
             >
-              <span className="text-[24px] md:text-[26px] font-black tracking-tight text-slate-950 transition-colors duration-200 group-hover:text-indigo-600">
-                M
-              </span>
-              <span className="text-[22px] md:text-[24px] font-normal tracking-tight text-slate-500 transition-colors duration-200 group-hover:text-slate-800">
-                orfolio
-              </span>
+              {/* Modern Name Typography */}
+              <div className="flex items-baseline">
+                <span className="text-[22px] md:text-[25px] font-black tracking-tight text-slate-900 transition-colors duration-200 group-hover:text-indigo-600">
+                  siv
+                </span>
+                <span className="text-[22px] md:text-[25px] font-extrabold tracking-tight bg-gradient-to-r from-indigo-600 via-purple-600 to-amber-500 bg-clip-text text-transparent">
+                  vannat
+                </span>
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 ml-1 mb-1 animate-pulse" title="Available for opportunities" />
+              </div>
             </a>
 
             {/* Desktop Navigation Links */}
@@ -107,12 +111,38 @@ export const Header = () => {
               })}
             </nav>
 
-            {/* Contact Action Button (Right) */}
-            <div className="hidden md:flex items-center">
+            {/* Right Action Buttons: Upload CV + Contact */}
+            <div className="hidden md:flex items-center gap-3">
+              {/* User Custom Upload CV Button Template */}
+              <a
+                href="/cv/Siv_Vannat_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="button upload-cv-btn"
+                title="View & Download Siv Vannat's CV"
+              >
+                <svg
+                  id="UploadToCloud"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="16px"
+                  width="16px"
+                  className="icon"
+                >
+                  <path d="M0 0h24v24H0V0z" fill="none"></path>
+                  <path
+                    className="color000000 svgShape"
+                    fill="#000000"
+                    d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l4.65-4.65c.2-.2.51-.2.71 0L17 13h-3z"
+                  ></path>
+                </svg>
+                Upload CV
+              </a>
+
               <a
                 href="#contact"
                 onClick={() => handleNavClick('#contact', 'contact')}
-                className={`inline-flex items-center justify-center px-5 py-2 rounded-full border text-sm font-medium tracking-normal transition-all duration-300 active:scale-95 cursor-pointer ${
+                className={`inline-flex items-center justify-center px-4 py-2 rounded-full border text-xs sm:text-sm font-medium tracking-normal transition-all duration-300 active:scale-95 cursor-pointer ${
                   activeNav === 'contact'
                     ? 'bg-slate-900 text-white border-slate-900 shadow-md'
                     : 'border-slate-700/80 text-slate-800 hover:bg-slate-900 hover:text-white hover:border-slate-900 hover:shadow-md'
@@ -186,7 +216,32 @@ export const Header = () => {
               {link.name}
             </a>
           ))}
-          <div className="pt-2 pb-1">
+          <div className="pt-2 pb-1 flex flex-col gap-3">
+            <a
+              href="/cv/Siv_Vannat_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileMenuOpen(false)}
+              className="button upload-cv-btn w-full justify-center text-center"
+            >
+              <svg
+                id="UploadToCloud"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                height="16px"
+                width="16px"
+                className="icon"
+              >
+                <path d="M0 0h24v24H0V0z" fill="none"></path>
+                <path
+                  className="color000000 svgShape"
+                  fill="#000000"
+                  d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l4.65-4.65c.2-.2.51-.2.71 0L17 13h-3z"
+                ></path>
+              </svg>
+              Upload CV
+            </a>
+
             <a
               href="#contact"
               onClick={() => setMobileMenuOpen(false)}
